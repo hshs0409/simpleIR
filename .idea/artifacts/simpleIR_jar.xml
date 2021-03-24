@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="simpleIR:jar">
+    <output-path>$PROJECT_DIR$/simpleIR_jar</output-path>
+    <root id="archive" name="simpleIR.jar">
+      <element id="module-output" name="simpleIR" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../Downloads/jsoup-1.13.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../Downloads/kkma-2.1.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
