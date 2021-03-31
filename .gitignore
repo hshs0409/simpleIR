@@ -20,10 +20,11 @@
 *.rar
 
 .idea/
-src/data/*
+src/data/*.html
 ./simpleIR.iml
 collection.xml
 index.xml
+index.post
 out/production/simpleIR/data/
 src/data/
 
