@@ -46,11 +46,11 @@ public class searcher {
 
         Iterator it = map.keySet().iterator();
         while (it.hasNext()) {
-            String str = (String) it.next();
-            if (hashMap.containsKey(str)) {
-                List<Double> list = (ArrayList<Double>) hashMap.get(str);
+            String keyword = (String) it.next();
+            if (hashMap.containsKey(keyword)) {
+                List<Double> list = (ArrayList<Double>) hashMap.get(keyword);
                 for (int j = 0; j < list.size(); j = j + 2) {
-                    sims[(int) Math.round(list.get(j))] += list.get(j + 1) * map.get(str);
+                    sims[(int) Math.round(list.get(j))] += list.get(j + 1) * map.get(keyword);
                 }
             }
         }
@@ -58,6 +58,7 @@ public class searcher {
         for (int i = 0; i < sims.length; i++) {
             elements.add(new Element(i, sims[i]));
         }
+
         String[] titles = {"떡", "라면", "아이스크림", "초밥", "파스타"};
         Collections.sort(elements);
         for (int i = 4; i > 1; i--) {
