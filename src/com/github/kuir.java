@@ -1,10 +1,14 @@
 package com.github;
 
 public class kuir {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
 
         String arg = args[0];
         String path = args[1];
+        String query = null;
+        if(args.length >=3){
+            query= args[3];
+        }
         switch (arg) {
             case "-c":
                 if (args[1] != null) {
@@ -22,6 +26,12 @@ public class kuir {
                 if (args[1] != null) {
                     indexer index = new indexer();
                     index.makeIndexer(path);
+                }
+                break;
+            case "-s":
+                if (args[1] != null) {
+                    searcher search = new searcher();
+                    search.calcSim(path,query);
                 }
                 break;
         }
