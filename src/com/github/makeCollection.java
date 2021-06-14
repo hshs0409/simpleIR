@@ -28,6 +28,7 @@ public class makeCollection {
         String line = null;
 
         File folder = new File(path); // file list
+        System.out. println(folder);
         File[] fileList = folder.listFiles();
         for (File file : fileList) {
             if (file.isFile()) {
